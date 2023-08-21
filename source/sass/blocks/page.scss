@@ -1,0 +1,9 @@
+.page body {
+  display: flex;
+  flex-direction: column;
+}
+
+.page__main {
+  flex-grow: 1;
+  z-index: 0;
+}
