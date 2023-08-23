@@ -4319,7 +4319,6 @@ button,
 
 .feedback__img {
   position: absolute;
-  display: block;
   width: calc(100% - 200px);
   height: 100%;
   left: 50%;
