@@ -1,0 +1,151 @@
+.feedback {
+  background-color: $color-alabaster;
+  padding: 120px 0 30px;
+
+  @include vp-1199 {
+    padding: 100px 0 30px;
+  }
+
+  @include vp-767 {
+    padding: 67px 0 14px;
+  }
+}
+
+.feedback .container {
+  position: relative;
+}
+
+.feedback__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 498px;
+  padding: 89px 74px 51px;
+  background-color: $color-cerulean-blue;
+  border-radius: 16px;
+  position: relative;
+  z-index: 1;
+
+  @include vp-1199 {
+    max-width: 442px;
+    padding: 65px 45px 58px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    padding: 56px 15px 50px;
+  }
+}
+
+.feedback__title {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: $color-default-white;
+  margin: 0 0 35px;
+
+  @include vp-1199 {
+    font-size: 28px;
+    line-height: 1;
+    margin: 0 0 35px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}
+
+.feedback__desc {
+  line-height: 1.6;
+  opacity: 0.9;
+  color: $color-alabaster;
+  margin: 0 0 30px;
+
+  @include vp-1199 {
+    line-height: 1.25;
+    margin: 0 0 40px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.feedback__form-wrapper {
+  & form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & label {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 0 20px;
+
+    &:last-child {
+      margin: 0 0 40px;
+    }
+  }
+
+  & label:has(input[type="checkbox"]) {
+    flex-direction: row;
+    align-items: center;
+
+    & span {
+      font-size: 12px;
+    }
+  }
+
+  & span {
+    color: $color-alabaster;
+    opacity: 0.8;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  & input[type="text"],
+  & input[type="tel"],
+  & textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid $color-default-white-20;
+    border-radius: 8px;
+    padding: 16px 25px;
+  }
+
+  & input[type="text"],
+  & input[type="tel"] {
+    height: 50px;
+  }
+
+  & textarea {
+    height: 98px;
+  }
+}
+
+.feedback__img {
+  position: absolute;
+  width: calc(100% - 200px);
+  height: 100%;
+  left: 50%;
+  translate: -50% 0;
+  border-radius: 16px;
+  overflow: hidden;
+
+  @include vp-1199 {
+    width: calc(100% - 90px);
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

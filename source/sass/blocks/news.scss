@@ -1,10 +1,14 @@
 .news {
   background-color: $color-alabaster;
-  padding: 124px 0 120px;
+  padding: 124px 0 60px;
   overflow: hidden;
 
   @include vp-1199 {
-    padding: 99px 0 120px;
+    padding: 99px 0 50px;
+  }
+
+  @include vp-767 {
+    padding: 69px 0 33px;
   }
 }
 
@@ -19,7 +23,8 @@
   }
 
   @include vp-767 {
-    aspect-ratio: 0.5;
+    aspect-ratio: 0.49;
+    margin: 0 0 20px;
   }
 }
 
@@ -38,7 +43,7 @@
   }
 
   @include vp-767 {
-    margin: 0 0 30px;
+    margin: 0 0 25px;
   }
 }
 
@@ -59,10 +64,11 @@
   }
 
   @include vp-767 {
-    margin: 0 0 24px;
+    margin: 0 0 24px 15px;
     flex-wrap: nowrap;
-    width: 100%;
     overflow-y: auto;
+    justify-content: flex-start;
+    width: calc(100% + 15px);
   }
 }
 
@@ -83,6 +89,12 @@
 
   @include vp-1199 {
     padding: 12px 19px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    letter-spacing: 0.24px;
+    padding: 10px 14px;
   }
 }
 
@@ -109,7 +121,17 @@
   overflow: hidden;
 
   @include vp-1199 {
-    height: calc(50% - 25px);
+    height: calc(50% - 28px);
+  }
+
+  @include vp-767 {
+    &:nth-child(2n + 1) {
+      height: calc(57% - 10px);
+    }
+
+    &:nth-child(2n) {
+      height: calc(39% - 10px);
+    }
   }
 
   @media (min-width: 1200px) {
@@ -150,6 +172,10 @@
   font-size: 12px;
   letter-spacing: 0.12px;
   max-width: 78px;
+
+  @include vp-767 {
+    padding: 12px 12px 5px 0;
+  }
 
   &::before {
     content: "";
@@ -194,6 +220,13 @@
     max-width: 68%;
   }
 
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 1.1;
+    max-width: 200px;
+    padding: 11px 13px 1px 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -220,6 +253,11 @@
     max-width: 79%;
   }
 
+  @include vp-767 {
+    max-width: 263px;
+    padding: 12px 10px 10px 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -241,6 +279,11 @@
 
   @include vp-1199 {
     line-height: 1.4;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 1.15;
   }
 }
 
@@ -304,6 +347,13 @@
   color: $color-cerulean-blue;
   opacity: 0.5;
   transition: background-color $trans-default, opacity $trans-default, color $trans-default;
+  overflow: hidden;
+
+  @include vp-767 {
+    min-width: 26px;
+    min-height: 26px;
+    font-size: 14px;
+  }
 
   &-active {
     background-color: $color-cerulean-blue;

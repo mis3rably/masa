@@ -1,0 +1,193 @@
+.faq {
+  background-color: $color-alabaster;
+  padding: 60px 0;
+
+  @include vp-1199 {
+    padding: 47px 0 50px;
+  }
+
+  @include vp-767 {
+    padding: 35px 0 34px;
+  }
+}
+
+.faq .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq .section-title {
+  color: $color-cerulean-blue;
+  margin: 4px 0 66px;
+
+  @include vp-1199 {
+    margin: 0 0 39px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 36px;
+  }
+}
+
+.faq__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 1028px;
+  padding: 0;
+  margin: 0;
+
+  @include vp-1199 {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.faq__button {
+  background-color: transparent;
+  border: none;
+  border-radius: 16px;
+  width: 100%;
+  cursor: pointer;
+  padding: 0;
+}
+
+.faq__heading {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: $color-cerulean-blue;
+  transition: color $trans-default;
+  text-align: start;
+  max-width: 600px;
+  margin: -7px 0;
+
+  @include vp-1199 {
+    font-size: 22px;
+    max-width: 500px;
+    margin: -4px 0;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.1;
+    margin: -2px 0;
+  }
+}
+
+.faq__heading-wrapper {
+  display: flex;
+  justify-content: space-between;
+  transition: margin $trans-default;
+  align-items: center;
+  gap: 30px;
+
+  @include vp-767 {
+    br {
+      display: none;
+    }
+  }
+}
+
+.faq__desc {
+  line-height: 1.6;
+  color: $color-default-white;
+  max-width: 67%;
+  margin: 0;
+
+  @include vp-1199 {
+    line-height: 1.25;
+    max-width: 86%;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.faq__item {
+  border-radius: 16px;
+  border: 1px solid $color-cerulean-blue;
+  padding: 40px 40px 38px;
+  background-color: transparent;
+  transition: background-color $trans-default, padding $trans-default;
+
+  @include vp-1199 {
+    padding: 29px 30px;
+  }
+
+  @include vp-767 {
+    padding: 19px 15px;
+  }
+}
+
+.faq__item.is-active {
+  background-color: $color-cerulean-blue;
+
+  @media (min-width: $vp-1200) {
+    padding: 40px 40px 33px;
+  }
+
+  & .faq__heading {
+    color: $color-default-white;
+  }
+
+  & .faq__heading-wrapper {
+    margin: 0 0 13px;
+  }
+
+  & .faq__visible-button {
+    background-color: $color-default-white;
+
+    &::before,
+    &::after {
+      background-color: $color-cerulean-blue;
+    }
+
+    &::before {
+      rotate: 90deg;
+      opacity: 0;
+    }
+  }
+}
+
+.faq__visible-button {
+  display: block;
+  width: 40px;
+  aspect-ratio: 1;
+  background-color: $color-cerulean-blue;
+  border-radius: 50%;
+  position: relative;
+  transition: background-color $trans-default;
+  align-self: start;
+  flex-shrink: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 18px;
+    background-color: $color-default-white;
+    transition: background-color $trans-default, rotate $trans-default, opacity $trans-default;
+  }
+
+  &::before {
+    width: 1px;
+    height: 18px;
+    top: 10px;
+    left: 20px;
+  }
+
+  &::after {
+    width: 18px;
+    height: 1px;
+    top: 19px;
+    left: 11px;
+  }
+}
