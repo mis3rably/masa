@@ -19,6 +19,10 @@ window.addEventListener('DOMContentLoaded', () => {
   const headerMenuButton = document.querySelector('.header__menu-button');
   const headerMenuWrapper = document.querySelector('.header__menu-wrapper');
   const header = document.querySelector('.header');
+  const feedbackDropdown = document.querySelector('.feedback__dropdown-wrapper');
+  const feedbackDropdownWrapper = document.querySelector('.feedback__form-field--dropdown');
+  const feedbackList = document.querySelector('.feedback__dropdown-list');
+  const dropdownText = document.querySelector('.feedback__dropdown-text');
 
   if (headerMenuWrapper && headerMenuButton && header) {
     const onClickOverlayCloseMenu = (evt) => {
@@ -50,6 +54,33 @@ window.addEventListener('DOMContentLoaded', () => {
         document.removeEventListener('click', onClickOverlayCloseMenu, false);
       }
     });
+  }
+
+  if (feedbackDropdown && feedbackDropdownWrapper && feedbackList && dropdownText) {
+    const showDropdown = () => {
+      feedbackDropdownWrapper.classList.add('is-active');
+    };
+
+    const hideDropdown = () => {
+      feedbackDropdownWrapper.classList.remove('is-active');
+    };
+
+    const onClickUpdateDropdown = (evt) => {
+      if (evt.target.closest('.feedback__dropdown-item')) {
+        dropdownText.textContent = evt.target.closest('.feedback__dropdown-item').querySelector('span').textContent;
+        hideDropdown();
+      }
+    };
+
+    feedbackDropdown.addEventListener('click', () => {
+      if (!feedbackDropdownWrapper.classList.contains('is-active')) {
+        showDropdown();
+      } else {
+        hideDropdown();
+      }
+    });
+
+    feedbackList.addEventListener('click', onClickUpdateDropdown);
   }
 
 

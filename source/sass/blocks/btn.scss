@@ -4,13 +4,13 @@
   gap: 30px;
   border-radius: 30px;
   background-color: transparent;
-  border: 1px solid $color-cerulean-blue;
   min-height: 54px;
   align-items: center;
   letter-spacing: 0.28px;
   transition: background-color $trans-default;
   justify-content: space-between;
   width: fit-content;
+  cursor: pointer;
 
   @include vp-1199 {
     font-size: 14px;
@@ -25,6 +25,39 @@
   }
 
   &--light-bg {
+    border: 1px solid $color-cerulean-blue;
+
+    @include hover-focus {
+      & .btn__text {
+        color: $color-default-white;
+      }
+
+      background-color: $color-cerulean-blue;
+
+      & .btn__svg-wrapper {
+        background-color: $color-default-white;
+
+        & svg {
+          stroke: $color-cerulean-blue;
+          rotate: 45deg;
+        }
+      }
+    }
+
+    &:active {
+      .btn__text {
+        opacity: 0.7;
+      }
+
+      & .btn__svg-wrapper svg {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &--blue-bg {
+    border: 1px solid $color-default-white;
+
     @include hover-focus {
       & .btn__text {
         color: $color-default-white;
@@ -55,13 +88,13 @@
 }
 
 .btn__text {
-  color: $color-cerulean-blue;
   transition: opacity $trans-default, color $trans-default;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.28px;
+  flex-grow: 1;
 
   @include vp-767 {
     font-size: 12px;
@@ -69,10 +102,17 @@
   }
 }
 
+.btn--light-bg .btn__text {
+  color: $color-cerulean-blue;
+}
+
+.btn--blue-bg .btn__text {
+  color: $color-default-white;
+}
+
 .btn__svg-wrapper {
   width: 46px;
   aspect-ratio: 1;
-  background-color: $color-cerulean-blue;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -84,7 +124,22 @@
   }
 
   & svg {
-    stroke: $color-default-white;
     transition: stroke $trans-default, rotate $trans-default, opacity $trans-default;
+  }
+}
+
+.btn--light-bg .btn__svg-wrapper {
+  background-color: $color-cerulean-blue;
+
+  & svg {
+    stroke: $color-default-white;
+  }
+}
+
+.btn--blue-bg .btn__svg-wrapper {
+  background-color: $color-default-white;
+
+  & svg {
+    stroke: $color-cerulean-blue;
   }
 }

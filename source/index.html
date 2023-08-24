@@ -812,23 +812,79 @@
             <h2 class="feedback__title">Напишите нам</h2>
             <p class="feedback__desc">Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
             <div class="feedback__form-wrapper">
-              <form action="post">
-                <label>
-                  <span>Имя</span>
-                  <input type="text">
-                </label>
-                <label>
-                  <span>Телефон</span>
-                  <input type="tel">
-                </label>
-                <label>
-                  <span>Ваше сообщение</span>
-                  <textarea cols="30" rows="10"></textarea>
-                </label>
-                <label>
-                  <input type="checkbox">
-                  <span>Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
-                </label>
+              <form action="https://echo.htmlacademy.ru/courses" method="get">
+                <div class="feedback__form-field feedback__form-field--text">
+                  <label>
+                    <span>Имя</span>
+                    <input type="text" name="name">
+                  </label>
+                </div>
+                <div class="feedback__form-field feedback__form-field--text">
+                  <label>
+                    <span>Телефон</span>
+                    <input type="tel" name="phone-number">
+                  </label>
+                </div>
+                <div class="feedback__form-field feedback__form-field--text feedback__form-field--textarea">
+                  <label>
+                    <span>Ваше сообщение</span>
+                    <textarea cols="30" rows="10" name="message"></textarea>
+                  </label>
+                </div>
+                <div class="feedback__form-field feedback__form-field--dropdown">
+                  <p class="feedback__dropdown-name">Выберите город</p>
+                  <div class="feedback__dropdown-wrapper">
+                    <span class="feedback__dropdown-text"></span>
+                    <svg class="feedback__dropdown-svg" width="16" height="16">
+                      <use href="img/sprite.svg#caret"></use>
+                    </svg>
+                  </div>
+                  <ul class="feedback__dropdown-list">
+                    <li class="feedback__dropdown-item">
+                      <label>
+                        <input class="visually-hidden" type="radio" name="city" value="saint-petersburg">
+                        <span>Санкт-Петербург</span>
+                      </label>
+                    </li>
+                    <li class="feedback__dropdown-item">
+                      <label>
+                        <input class="visually-hidden" type="radio" name="city" value="kaliningrad">
+                        <span>Калининград</span>
+                      </label>
+                    </li>
+                    <li class="feedback__dropdown-item">
+                      <label>
+                        <input class="visually-hidden" type="radio" name="city" value="moscow">
+                        <span>Москва</span>
+                      </label>
+                    </li>
+                    <li class="feedback__dropdown-item">
+                      <label>
+                        <input class="visually-hidden" type="radio" name="city" value="novosibirsk">
+                        <span>Новосибирск</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="feedback__form-field feedback__form-field--checkbox">
+                  <label>
+                    <input class="visually-hidden" type="checkbox">
+                    <span>
+                      <svg width="8" height="8">
+                        <use href="img/sprite.svg#tick"></use>
+                      </svg>
+                    </span>
+                    <p>Я&nbsp;согласен на&nbsp;обработку моих персональных данных</p>
+                  </label>
+                </div>
+                <button class="btn btn--blue-bg" type="submit">
+                  <span class="btn__text">Отправить</span>
+                  <div class="btn__svg-wrapper">
+                    <svg class="btn__svg" width="8" height="8">
+                      <use href="img/sprite.svg#arrow-btn"></use>
+                    </svg>
+                  </div>
+                </button>
               </form>
             </div>
           </div>
