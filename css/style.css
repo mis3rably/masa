@@ -2851,7 +2851,7 @@ button,
   display: flex;
   padding: 0;
   gap: 20px;
-  max-width: 260px;
+  max-width: 204px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 0 0 auto;
@@ -4517,6 +4517,10 @@ button,
   border-color: #484848;
 }
 
+.dropdown--light .dropdown__svg {
+  stroke: #484848;
+}
+
 .dropdown__name {
   color: #f0efe9;
   opacity: 0.8;
@@ -4547,6 +4551,10 @@ button,
   top: 50%;
   translate: 0 -50%;
   right: 20px;
+  stroke: #ffffff;
+  fill: none;
+  -webkit-transition: rotate 0.3s ease;
+  transition: rotate 0.3s ease;
 }
 
 .dropdown__list {
@@ -4591,6 +4599,13 @@ button,
   -webkit-animation: fade 0.3s;
   animation: fade 0.3s;
   opacity: 1;
+}
+
+.dropdown:has(.dropdown__list.is-open) .dropdown__svg {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  rotate: 180deg;
 }
 
 .modal {
@@ -4674,7 +4689,7 @@ button,
   position: relative;
   border-radius: 16px;
   width: 510px;
-  padding: 80px 60px;
+  padding: 55px 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4693,24 +4708,28 @@ button,
 }
 
 .modal__title {
-  margin: 0 0 20px;
+  margin: 0 0 10px;
   font-size: 32px;
   font-weight: 400;
   line-height: 1;
   color: #316dc2;
 }
 
+.modal__title br {
+  display: none;
+}
+
 .modal__desc {
   line-height: 1.6;
-  margin: 0 0 30px;
+  margin: 0 0 20px;
   text-align: center;
 }
 
 .modal__close-btn {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 18px;
+  top: 30px;
+  right: 30px;
+  width: 22px;
   aspect-ratio: 1;
   padding: 0;
   background: rgba(255, 255, 255, 0);
@@ -4722,7 +4741,7 @@ button,
 .modal__close-btn::after {
   content: "";
   position: absolute;
-  width: 18px;
+  width: 22px;
   height: 1px;
   background-color: #316dc2;
   top: 50%;
@@ -4746,7 +4765,7 @@ button,
 }
 
 .modal__form-field {
-  margin: 0 0 20px;
+  margin: 0 0 15px;
   width: 100%;
 }
 
@@ -4762,7 +4781,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
 }
 
 .modal__form-field--text input,
@@ -4772,7 +4791,7 @@ button,
   border: 1px solid rgba(72, 72, 72, 0.3);
   border-radius: 8px;
   padding: 16px 25px;
-  height: 50px;
+  height: 44px;
 }
 
 .modal__form-field--text span,
@@ -4790,7 +4809,6 @@ button,
 
 .modal__form-field--checkbox span,
 .modal__form-field--checkbox p {
-  color: #f0efe9;
   opacity: 0.8;
   font-size: 14px;
   font-weight: 400;
@@ -4823,7 +4841,7 @@ button,
   top: 50%;
   translate: 0 -50%;
   background-color: transparent;
-  border: 1px solid #ffffff;
+  border: 1px solid #316dc2;
   opacity: 0.7;
   -webkit-transition: background-color 0.3s ease, opacity 0.3s ease;
   transition: background-color 0.3s ease, opacity 0.3s ease;
@@ -4840,12 +4858,12 @@ button,
 }
 
 .modal__form-field--checkbox input:checked + span {
-  background-color: #ffffff;
+  background-color: #316dc2;
   opacity: 1;
 }
 
 .modal__form-field--checkbox input:checked + span svg {
-  stroke: #316dc2;
+  stroke: #ffffff;
 }
 
 .modal__form-field--checkbox p {
@@ -5382,10 +5400,19 @@ button,
 
   .modal__title {
     font-size: 28px;
+    margin: 0 0 14px;
   }
 
   .modal__desc {
     line-height: 1.25;
+  }
+
+  .modal__form-field {
+    margin: 0 0 14px;
+  }
+
+  .modal__form-field:last-of-type {
+    margin: 0 0 20px;
   }
 }
 
@@ -6048,28 +6075,39 @@ button,
     line-height: 1.2;
   }
 
+  .dropdown__wrapper {
+    padding: 11px 36px 10px 20px;
+  }
+
   .modal__wrapper {
     padding: 23px 15px;
   }
 
   .modal__content {
     width: 100%;
-    padding: 40px 15px;
+    padding: 37px 15px 40px;
   }
 
   .modal__title {
     font-size: 18px;
-    margin: 0 0 15px;
+    margin: 0 0 8px;
+  }
+
+  .modal__title br {
+    display: block;
   }
 
   .modal__desc {
     font-size: 14px;
     line-height: 1.4;
-    margin: 0 0 25px;
+    margin: 0 0 19px;
+    max-width: 85%;
   }
 
   .modal__close-btn {
     width: 16px;
+    top: 20px;
+    right: 20px;
   }
 
   .modal__close-btn::before,
@@ -6079,6 +6117,15 @@ button,
 
   .modal .btn {
     width: 100%;
+  }
+
+  .modal .dropdown__wrapper {
+    height: 44px;
+  }
+
+  .modal .dropdown__name {
+    font-size: 14px;
+    margin: 0 0 6px;
   }
 }
 
