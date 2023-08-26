@@ -41,18 +41,18 @@
                     <use href="img/sprite.svg#arrow-down"></use>
                   </svg>
                 </button>
-                <ul class="header__menu-list header__menu-list--submenu" data-accordion="content">
-                  <li class="header__menu-item header__menu-item--submenu">
-                    <a class="header__menu-link header__menu-link--submenu" href="">Стажировки</a>
+                <ul class="header__submenu-list" data-accordion="content">
+                  <li class="header__submenu-item">
+                    <a class="header__submenu-link" href="">Стажировки</a>
                   </li>
-                  <li class="header__menu-item header__menu-item--submenu">
-                    <a class="header__menu-link header__menu-link--submenu" href="">Волонтёрство</a>
+                  <li class="header__submenu-item">
+                    <a class="header__submenu-link" href="">Волонтёрство</a>
                   </li>
-                  <li class="header__menu-item header__menu-item--submenu">
-                    <a class="header__menu-link header__menu-link--submenu" href="">Учеба</a>
+                  <li class="header__submenu-item">
+                    <a class="header__submenu-link" href="">Учеба</a>
                   </li>
-                  <li class="header__menu-item header__menu-item--submenu">
-                    <a class="header__menu-link header__menu-link--submenu" href="">Религия</a>
+                  <li class="header__submenu-item">
+                    <a class="header__submenu-link" href="">Религия</a>
                   </li>
                 </ul>
               </li>
@@ -69,21 +69,21 @@
                     <use href="img/sprite.svg#arrow-down"></use>
                   </svg>
                 </button>
-                <ul class="header__menu-list header__menu-list--submenu" data-accordion="content">
-                  <li class="header__menu-item header__menu-item--submenu">
-                    <a class="header__menu-link header__menu-link--submenu" href="">Общее</a>
+                <ul class="header__submenu-list" data-accordion="content">
+                  <li class="header__submenu-item">
+                    <a class="header__submenu-link" href="">Общее</a>
                   </li>
-                  <li class="header__menu-item header__menu-item--submenu">
-                    <a class="header__menu-link header__menu-link--submenu" href="">Волонтёрство</a>
+                  <li class="header__submenu-item">
+                    <a class="header__submenu-link" href="">Волонтёрство</a>
                   </li>
-                  <li class="header__menu-item header__menu-item--submenu">
-                    <a class="header__menu-link header__menu-link--submenu" href="">Стажировки</a>
+                  <li class="header__submenu-item">
+                    <a class="header__submenu-link" href="">Стажировки</a>
                   </li>
-                  <li class="header__menu-item header__menu-item--submenu">
-                    <a class="header__menu-link header__menu-link--submenu" href="">Карьера</a>
+                  <li class="header__submenu-item">
+                    <a class="header__submenu-link" href="">Карьера</a>
                   </li>
-                  <li class="header__menu-item header__menu-item--submenu">
-                    <a class="header__menu-link header__menu-link--submenu" href="">Путешествия</a>
+                  <li class="header__submenu-item">
+                    <a class="header__submenu-link" href="">Путешествия</a>
                   </li>
                 </ul>
               </li>
@@ -96,7 +96,7 @@
       </div>
     </header>
 
-    <main class="page__main">
+    <main>
       <section class="hero">
         <ul class="swiper-wrapper">
           <li class="swiper-slide">
@@ -117,14 +117,14 @@
                   Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных организациях.
                 </p>
                 <div class="hero__button-wrapper">
-                  <a class="btn btn--light-bg" href="#">
+                  <button class="btn btn--light-bg" type="button" data-open-modal="modal-1">
                     <span class="btn__text">Подробнее</span>
                     <div class="btn__svg-wrapper">
                       <svg class="btn__svg" width="8" height="8">
                         <use href="img/sprite.svg#arrow-btn"></use>
                       </svg>
                     </div>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -147,14 +147,14 @@
                   Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и&nbsp;другое.
                 </p>
                 <div class="hero__button-wrapper">
-                  <a class="btn btn--light-bg" href="#">
+                  <button class="btn btn--light-bg" type="button" data-open-modal="modal-1">
                     <span class="btn__text">Подробнее</span>
                     <div class="btn__svg-wrapper">
                       <svg class="btn__svg" width="8" height="8">
                         <use href="img/sprite.svg#arrow-btn"></use>
                       </svg>
                     </div>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -177,14 +177,14 @@
                   Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая настоящий израильский стиль жизни!
                 </p>
                 <div class="hero__button-wrapper">
-                  <a class="btn btn--light-bg" href="#">
+                  <button class="btn btn--light-bg" type="button" data-open-modal="modal-1">
                     <span class="btn__text">Подробнее</span>
                     <div class="btn__svg-wrapper">
                       <svg class="btn__svg" width="8" height="8">
                         <use href="img/sprite.svg#arrow-btn"></use>
                       </svg>
                     </div>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -831,34 +831,34 @@
                     <textarea cols="30" rows="10" name="message"></textarea>
                   </label>
                 </div>
-                <div class="feedback__form-field feedback__form-field--dropdown">
-                  <p class="feedback__dropdown-name">Выберите город</p>
-                  <div class="feedback__dropdown-wrapper">
-                    <span class="feedback__dropdown-text"></span>
-                    <svg class="feedback__dropdown-svg" width="16" height="16">
+                <div class="feedback__form-field dropdown">
+                  <p class="dropdown__name">Выберите город</p>
+                  <div class="dropdown__wrapper">
+                    <span class="dropdown__text"></span>
+                    <svg class="dropdown__svg" width="16" height="16">
                       <use href="img/sprite.svg#caret"></use>
                     </svg>
                   </div>
-                  <ul class="feedback__dropdown-list">
-                    <li class="feedback__dropdown-item">
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item">
                       <label>
                         <input class="visually-hidden" type="radio" name="city" value="saint-petersburg">
                         <span>Санкт-Петербург</span>
                       </label>
                     </li>
-                    <li class="feedback__dropdown-item">
+                    <li class="dropdown__item">
                       <label>
                         <input class="visually-hidden" type="radio" name="city" value="kaliningrad">
                         <span>Калининград</span>
                       </label>
                     </li>
-                    <li class="feedback__dropdown-item">
+                    <li class="dropdown__item">
                       <label>
                         <input class="visually-hidden" type="radio" name="city" value="moscow">
                         <span>Москва</span>
                       </label>
                     </li>
-                    <li class="feedback__dropdown-item">
+                    <li class="dropdown__item">
                       <label>
                         <input class="visually-hidden" type="radio" name="city" value="novosibirsk">
                         <span>Новосибирск</span>
@@ -946,6 +946,74 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal" data-modal="modal-1">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <button class="modal__close-btn" type="button" data-close-modal></button>
+          <h2 class="modal__title">Напишите нам</h2>
+          <p class="modal__desc">Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
+          <form class="modal__form" action="https://echo.htmlacademy.ru/courses" method="get">
+            <div class="modal__form-field modal__form-field--text">
+              <label>
+                <span>Имя</span>
+                <input type="text" name="name">
+              </label>
+            </div>
+            <div class="modal__form-field modal__form-field--text">
+              <label>
+                <span>Телефон</span>
+                <input type="tel" name="phone-number">
+              </label>
+            </div>
+            <div class="modal__form-field dropdown dropdown--light">
+              <p class="dropdown__name">Выберите город</p>
+              <div class="dropdown__wrapper">
+                <span class="dropdown__text"></span>
+                <svg class="dropdown__svg" width="16" height="16">
+                  <use href="img/sprite.svg#caret"></use>
+                </svg>
+              </div>
+              <ul class="dropdown__list">
+                <li class="dropdown__item">
+                  <label>
+                    <input class="visually-hidden" type="radio" name="city" value="saint-petersburg">
+                    <span>Санкт-Петербург</span>
+                  </label>
+                </li>
+                <li class="dropdown__item">
+                  <label>
+                    <input class="visually-hidden" type="radio" name="city" value="kaliningrad">
+                    <span>Калининград</span>
+                  </label>
+                </li>
+                <li class="dropdown__item">
+                  <label>
+                    <input class="visually-hidden" type="radio" name="city" value="moscow">
+                    <span>Москва</span>
+                  </label>
+                </li>
+                <li class="dropdown__item">
+                  <label>
+                    <input class="visually-hidden" type="radio" name="city" value="novosibirsk">
+                    <span>Новосибирск</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <button class="btn btn--light-bg" type="submit" data-close-modal>
+              <span class="btn__text">Отправить</span>
+              <div class="btn__svg-wrapper">
+                <svg class="btn__svg" width="8" height="8">
+                  <use href="img/sprite.svg#arrow-btn"></use>
+                </svg>
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
