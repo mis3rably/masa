@@ -14,6 +14,10 @@
     & .dropdown__list {
       border-color: $color-charcoal;
     }
+
+    & .dropdown__svg {
+      stroke: $color-charcoal;
+    }
   }
 }
 
@@ -40,6 +44,10 @@
   border: 1px solid $color-default-white-30;
   height: 50px;
   cursor: pointer;
+
+  @include vp-767 {
+    padding: 11px 36px 10px 20px;
+  }
 }
 
 .dropdown__text {
@@ -52,6 +60,9 @@
   top: 50%;
   translate: 0 -50%;
   right: 20px;
+  stroke: $color-default-white;
+  fill: none;
+  transition: rotate $trans-default;
 }
 
 .dropdown__list {
@@ -91,4 +102,9 @@
   display: block;
   animation: fade 0.3s;
   opacity: 1;
+}
+
+.dropdown:has(.dropdown__list.is-open) .dropdown__svg {
+  transform-origin: center;
+  rotate: 180deg;
 }

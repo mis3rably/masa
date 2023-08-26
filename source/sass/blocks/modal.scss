@@ -63,7 +63,7 @@
     position: relative;
     border-radius: 16px;
     width: 510px;
-    padding: 80px 60px;
+    padding: 55px 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,12 +75,12 @@
 
     @include vp-767 {
       width: 100%;
-      padding: 40px 15px;
+      padding: 37px 15px 40px;
     }
   }
 
   &__title {
-    margin: 0 0 20px;
+    margin: 0 0 10px;
     font-size: 32px;
     font-weight: 400;
     line-height: 1;
@@ -88,17 +88,26 @@
 
     @include vp-1199 {
       font-size: 28px;
+      margin: 0 0 14px;
     }
 
     @include vp-767 {
       font-size: 18px;
-      margin: 0 0 15px;
+      margin: 0 0 8px;
+    }
+
+    br {
+      display: none;
+
+      @include vp-767 {
+        display: block;
+      }
     }
   }
 
   &__desc {
     line-height: 1.6;
-    margin: 0 0 30px;
+    margin: 0 0 20px;
     text-align: center;
 
     @include vp-1199 {
@@ -108,26 +117,29 @@
     @include vp-767 {
       font-size: 14px;
       line-height: 1.4;
-      margin: 0 0 25px;
+      margin: 0 0 19px;
+      max-width: 85%;
     }
   }
 
   &__close-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 18px;
+    top: 30px;
+    right: 30px;
+    width: 22px;
     aspect-ratio: 1;
 
     @include vp-767 {
       width: 16px;
+      top: 20px;
+      right: 20px;
     }
 
     &::before,
     &::after {
       content: "";
       position: absolute;
-      width: 18px;
+      width: 22px;
       height: 1px;
       background-color: $color-cerulean-blue;
       top: 50%;
@@ -160,17 +172,25 @@
   }
 
   &__form-field {
-    margin: 0 0 20px;
+    margin: 0 0 15px;
     width: 100%;
+
+    @include vp-1199 {
+      margin: 0 0 14px;
+    }
 
     &:last-of-type {
       margin: 0 0 40px;
+
+      @include vp-1199 {
+        margin: 0 0 20px;
+      }
     }
 
     & label {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 6px;
     }
 
     &--text {
@@ -181,7 +201,7 @@
         border: 1px solid $color-charcoal-30;
         border-radius: 8px;
         padding: 16px 25px;
-        height: 50px;
+        height: 44px;
       }
 
       & span,
@@ -203,7 +223,6 @@
     &--checkbox {
       & span,
       & p {
-        color: $color-alabaster;
         opacity: 0.8;
         font-size: 14px;
         font-weight: 400;
@@ -231,7 +250,7 @@
         top: 50%;
         translate: 0 -50%;
         background-color: transparent;
-        border: 1px solid $color-default-white;
+        border: 1px solid $color-cerulean-blue;
         opacity: 0.7;
         transition: background-color $trans-default, opacity $trans-default;
       }
@@ -246,11 +265,11 @@
       }
 
       & input:checked + span {
-        background-color: $color-default-white;
+        background-color: $color-cerulean-blue;
         opacity: 1;
 
         & svg {
-          stroke: $color-cerulean-blue;
+          stroke: $color-default-white;
         }
       }
 
@@ -282,5 +301,18 @@
 .modal .btn {
   @include vp-767 {
     width: 100%;
+  }
+}
+
+.modal .dropdown__wrapper {
+  @include vp-767 {
+    height: 44px;
+  }
+}
+
+.modal .dropdown__name {
+  @include vp-767 {
+    font-size: 14px;
+    margin: 0 0 6px;
   }
 }
