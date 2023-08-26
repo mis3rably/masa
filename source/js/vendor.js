@@ -99,6 +99,14 @@ const sortingNews = (a, b) => {
 };
 
 if (newsFilterList && newsSlidesList && newsSlider && newsSlidesContainer) {
+  const breakpoint = window.matchMedia('(min-width: 1200px)');
+
+  window.addEventListener('resize', () => {
+    if (breakpoint.matches && newsSlidesContainer.style.width !== null) {
+      newsSlidesContainer.style.width = null;
+    }
+  });
+
   newsFilterList.addEventListener('click', (evt) => {
     if (evt.target.closest('.news__filter-button') && !evt.target.closest('.news__filter-button').classList.contains('is-active')) {
       const documentFragment = new DocumentFragment();

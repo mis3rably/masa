@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initAccordions} from './modules/accordion/init-accordion';
-import {ScrollLock} from './modules/scroll-lock/scroll-lock';
+import {ScrollLock} from './utils/scroll-lock';
 
 // ---------------------------------
 
@@ -19,12 +19,10 @@ window.addEventListener('DOMContentLoaded', () => {
   const headerMenuButton = document.querySelector('.header__menu-button');
   const headerMenuWrapper = document.querySelector('.header__menu-wrapper');
   const header = document.querySelector('.header');
-  const feedbackDropdown = document.querySelector('.feedback__dropdown-wrapper');
-  const feedbackDropdownWrapper = document.querySelector('.feedback__form-field--dropdown');
-  const feedbackList = document.querySelector('.feedback__dropdown-list');
-  const dropdownText = document.querySelector('.feedback__dropdown-text');
+  const dropdown = document.querySelectorAll('.dropdown');
+  const heroPagination = document.querySelector('.hero__pagination-wrapper');
 
-  if (headerMenuWrapper && headerMenuButton && header) {
+  if (headerMenuWrapper && headerMenuButton && header && heroPagination) {
     const onClickOverlayCloseMenu = (evt) => {
       if (!evt.target.closest('.header__menu-button') && !evt.target.closest('.header__menu')) {
         headerMenuWrapper.classList.toggle('opened');
@@ -56,31 +54,26 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (feedbackDropdown && feedbackDropdownWrapper && feedbackList && dropdownText) {
-    const showDropdown = () => {
-      feedbackDropdownWrapper.classList.add('is-active');
-    };
+  if (dropdown) {
+    dropdown.forEach((dropdownInstance) => {
+      const dropdownWrapper = dropdownInstance.querySelector('.dropdown__wrapper');
+      const dropdownList = dropdownInstance.querySelector('.dropdown__list');
+      const dropdownText = dropdownInstance.querySelector('.dropdown__text');
 
-    const hideDropdown = () => {
-      feedbackDropdownWrapper.classList.remove('is-active');
-    };
+      if (dropdownWrapper && dropdownList && dropdownText) {
 
-    const onClickUpdateDropdown = (evt) => {
-      if (evt.target.closest('.feedback__dropdown-item')) {
-        dropdownText.textContent = evt.target.closest('.feedback__dropdown-item').querySelector('span').textContent;
-        hideDropdown();
-      }
-    };
+        dropdownWrapper.addEventListener('click', () => {
+          dropdownList.classList.toggle('is-open');
+        });
 
-    feedbackDropdown.addEventListener('click', () => {
-      if (!feedbackDropdownWrapper.classList.contains('is-active')) {
-        showDropdown();
-      } else {
-        hideDropdown();
+        dropdownList.addEventListener('click', (evt) => {
+          if (evt.target.closest('.dropdown__item') && evt.target.tagName === 'INPUT') {
+            dropdownText.textContent = evt.target.closest('.dropdown__item').querySelector('span').textContent;
+            dropdownList.classList.toggle('is-open');
+          }
+        });
       }
     });
-
-    feedbackList.addEventListener('click', onClickUpdateDropdown);
   }
 
 

@@ -24,6 +24,12 @@ export class ScrollLock {
     this._scrollTop = document.body.dataset.scroll = document.body.dataset.scroll ? document.body.dataset.scroll : this._getBodyScrollTop();
     if (this._getScrollbarWidth()) {
       document.body.style.paddingRight = `${this._getScrollbarWidth()}px`;
+      if (document.querySelector('.header') && document.querySelector('.hero .swiper-pagination') && window.matchMedia('(min-width: 1420px)').matches) {
+        document.querySelector('.header').style.left = `calc(50% - ${this._getScrollbarWidth()}px)`;
+        document.querySelector('.header').style.translate = `calc(-50% + ${Math.round(this._getScrollbarWidth() / 2)}px) 0`;
+        document.querySelector('.hero__pagination-wrapper').style.left = `calc(50% - ${this._getScrollbarWidth()}px)`;
+        document.querySelector('.hero__pagination-wrapper').style.translate = `calc(-50% + ${Math.round(this._getScrollbarWidth() / 2)}px) 0`;
+      }
       this._fixedBlockElements.forEach((block) => {
         block.style.paddingRight = `${this._getScrollbarWidth()}px`;
       });
@@ -37,6 +43,10 @@ export class ScrollLock {
     window.scrollTo(0, +document.body.dataset.scroll);
     document.body.style.paddingRight = null;
     document.body.style.top = null;
+    document.querySelector('.header').style.left = null;
+    document.querySelector('.header').style.translate = null;
+    document.querySelector('.hero__pagination-wrapper').style.left = null;
+    document.querySelector('.hero__pagination-wrapper').style.translate = null;
     this._fixedBlockElements.forEach((block) => {
       block.style.paddingRight = null;
     });

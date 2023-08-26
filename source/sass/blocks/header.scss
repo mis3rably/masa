@@ -23,6 +23,18 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+  padding-left: 100px;
+  padding-right: 100px;
+
+  @include vp-1199 {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @include vp-767 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .header__menu-wrapper {
@@ -36,8 +48,8 @@
 
   &::after {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 200vw;
+    height: 200vh;
     background-color: $color-black-pearl;
     opacity: 0;
     transition: opacity $trans-default;
@@ -185,12 +197,19 @@
   @include vp-767 {
     width: calc(100vw - 80px);
   }
+}
 
-  &--submenu {
-    gap: 16px;
-    padding: 0 16px;
-    overflow: hidden;
-  }
+.header__submenu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 286px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  gap: 16px;
+  padding: 0 16px;
+  overflow: hidden;
 }
 
 .header__menu-link {
@@ -202,10 +221,10 @@
   opacity: 0.7;
   display: block;
   width: fit-content;
+  transition: opacity $trans-default;
 
-  &--submenu {
-    opacity: 0.6;
-    text-transform: none;
+  @include hover-focus {
+    opacity: 0.9;
   }
 
   &--accordion {
@@ -218,8 +237,20 @@
   }
 }
 
+.header__submenu-link {
+  text-decoration: none;
+  color: $color-default-white;
+  font-weight: 400;
+  letter-spacing: 1px;
+  display: block;
+  width: fit-content;
+  opacity: 0.6;
+  transition: opacity $trans-default;
+}
+
 .header__menu-item.is-active .header__menu-link--accordion {
   margin-bottom: 20px;
+  opacity: 1;
 }
 
 .header__menu-burger-line {
