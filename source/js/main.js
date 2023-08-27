@@ -23,7 +23,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const headerMenuWrapper = document.querySelector('.header__menu-wrapper');
   const headerMenu = document.querySelector('.header__menu');
   const header = document.querySelector('.header');
-  const dropdown = document.querySelectorAll('.dropdown');
   const heroPagination = document.querySelector('.hero__pagination-wrapper');
   const customSelectList = document.querySelectorAll('.custom-select__list');
   const feedbackFormButton = document.querySelector('.feedback__form-wrapper button[type="submit"]');
