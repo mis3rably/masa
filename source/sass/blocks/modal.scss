@@ -69,10 +69,6 @@
     align-items: center;
     background-color: #ffffff;
 
-    &:has(.dropdown__list.is-open) {
-      margin: 0 0 85px;
-    }
-
     @include vp-767 {
       width: 100%;
       padding: 37px 15px 40px;
@@ -95,14 +91,6 @@
       font-size: 18px;
       margin: 0 0 8px;
     }
-
-    br {
-      display: none;
-
-      @include vp-767 {
-        display: block;
-      }
-    }
   }
 
   &__desc {
@@ -117,8 +105,16 @@
     @include vp-767 {
       font-size: 14px;
       line-height: 1.4;
-      margin: 0 0 19px;
+      margin: 0 0 20px;
       max-width: 85%;
+    }
+
+    br {
+      display: none;
+
+      @include vp-767 {
+        display: block;
+      }
     }
   }
 
@@ -146,6 +142,7 @@
       left: 50%;
       translate: -50% 0;
       transform-origin: center;
+      transition: opacity $trans-default;
 
       @include vp-767 {
         width: 16px;
@@ -160,6 +157,22 @@
       rotate: -45deg;
     }
 
+    @include hover-focus {
+      outline: none;
+
+      &::before,
+      &::after {
+        opacity: 0.7;
+      }
+    }
+
+    &:active {
+      &::before,
+      &::after {
+        opacity: 0.4;
+      }
+    }
+
     padding: 0;
 
     background: rgba(255, 255, 255, 0);
@@ -172,18 +185,22 @@
   }
 
   &__form-field {
-    margin: 0 0 15px;
+    margin: 0 0 19px;
     width: 100%;
 
     @include vp-1199 {
-      margin: 0 0 14px;
+      margin: 0 0 16px;
     }
 
     &:last-of-type {
-      margin: 0 0 40px;
+      margin: 0 0 33px;
 
       @include vp-1199 {
-        margin: 0 0 20px;
+        margin: 0 0 29px;
+      }
+
+      @include vp-767 {
+        margin: 0 0 24px;
       }
     }
 
@@ -191,6 +208,10 @@
       display: flex;
       flex-direction: column;
       gap: 6px;
+
+      @include vp-1199 {
+        gap: 9px;
+      }
     }
 
     &--text {
@@ -201,7 +222,25 @@
         border: 1px solid $color-charcoal-30;
         border-radius: 8px;
         padding: 16px 25px;
-        height: 44px;
+        height: 50px;
+        transition: border-color $trans-default;
+
+        @include hover-focus {
+          outline: none;
+          border-color: $color-charcoal;
+        }
+
+        @include vp-767 {
+          height: 44px;
+        }
+
+        &[aria-invalid="true"] {
+          border-color: $color-wild-watermelon;
+
+          @include hover-focus {
+            border-color: $color-wild-watermelon-50;
+          }
+        }
       }
 
       & span,
@@ -221,13 +260,18 @@
     }
 
     &--checkbox {
-      & span,
-      & p {
+      & span {
         opacity: 0.8;
         font-size: 14px;
         font-weight: 400;
         line-height: 1.3;
         margin: 0;
+      }
+
+      & b {
+        font-weight: inherit;
+        opacity: 0.9;
+        font-size: 12px;
       }
 
       & label {
@@ -240,7 +284,7 @@
         min-height: 20px;
       }
 
-      & span {
+      & span:not(.input-message) {
         display: block;
         width: 20px;
         aspect-ratio: 1;
@@ -277,6 +321,31 @@
         font-size: 12px;
       }
     }
+
+    &--custom-select {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      @include vp-1199 {
+        gap: 6px;
+        margin: 0 0 20px;
+      }
+
+      & > span {
+        color: $color-charcoal;
+        opacity: 0.8;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.3;
+        margin: 0;
+
+        @include vp-767 {
+          font-size: 14px;
+          line-height: 1;
+        }
+      }
+    }
   }
 
   &--preload {
@@ -304,15 +373,41 @@
   }
 }
 
-.modal .dropdown__wrapper {
-  @include vp-767 {
-    height: 44px;
+.modal__form-wrapper {
+  width: 100%;
+
+  & form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-.modal .dropdown__name {
+.modal__form-field--checkbox:has(.input-message) {
+  padding: 0 0 20px;
+
+  @include vp-1199 {
+    padding: 0 0 35px;
+  }
+}
+
+.modal__form-field--checkbox .input-message {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+}
+
+.modal .custom-select {
   @include vp-767 {
-    font-size: 14px;
-    margin: 0 0 6px;
+    padding: 4px 0 4px;
+  }
+}
+
+.modal .custom-select__button {
+  height: 50px;
+
+  @include vp-767 {
+    height: 44px;
   }
 }

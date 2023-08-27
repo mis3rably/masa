@@ -48,8 +48,8 @@
 
   &::after {
     position: fixed;
-    width: 200vw;
-    height: 200vh;
+    width: 100vw;
+    height: 100vh;
     background-color: $color-black-pearl;
     opacity: 0;
     transition: opacity $trans-default;
@@ -89,6 +89,7 @@
   transition: background-color $trans-default, gap $trans-default;
   justify-content: space-between;
   width: fit-content;
+  user-select: none;
 
   @include hover-focus {
     outline: none;
@@ -143,7 +144,7 @@
 
 .header__menu-wrapper.opened .header__menu-button {
   background-color: $color-cerulean-blue;
-  gap: 221px;
+  gap: 172px;
 
   @include vp-767 {
     gap: calc(100vw - 145px);
@@ -167,7 +168,7 @@
   position: absolute;
   top: 60px;
   height: 0;
-  max-height: 400px;
+  max-height: 405px;
 }
 
 .header__menu > * {
@@ -176,7 +177,7 @@
 
 .header__menu-wrapper.opened .header__menu {
   grid-template-rows: 1fr;
-  padding-top: 35px;
+  padding-top: 32px;
   padding-bottom: 35px;
   padding-left: 25px;
   padding-right: 25px;
@@ -187,10 +188,10 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 23px;
   margin: 0;
   padding: 0;
-  width: 286px;
+  width: 237px;
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -207,7 +208,7 @@
   width: 286px;
   overflow-x: hidden;
   overflow-y: auto;
-  gap: 16px;
+  gap: 12px;
   padding: 0 16px;
   overflow: hidden;
 }
@@ -216,7 +217,7 @@
   text-decoration: none;
   color: $color-default-white;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 0.32px;
   text-transform: uppercase;
   opacity: 0.7;
   display: block;
@@ -225,13 +226,15 @@
 
   @include hover-focus {
     opacity: 0.9;
+    outline: none;
   }
 
   &--accordion {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    padding: 0 20px 0 0;
+    padding: 0 22px 0 0;
+    font-weight: 500;
     position: relative;
     transition: margin-bottom $trans-default;
   }
@@ -241,15 +244,20 @@
   text-decoration: none;
   color: $color-default-white;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 0.32px;
   display: block;
   width: fit-content;
   opacity: 0.6;
   transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.9;
+    outline: none;
+  }
 }
 
 .header__menu-item.is-active .header__menu-link--accordion {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   opacity: 1;
 }
 

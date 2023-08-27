@@ -87,13 +87,18 @@
 
 .feedback__form-field {
   margin: 0 0 16px;
+  position: relative;
 
   @include vp-767 {
     margin: 0 0 21px;
   }
 
   &:last-of-type {
-    margin: 0 0 40px;
+    margin: 7px 0 40px;
+
+    @include vp-1199 {
+      margin: 3px 0 40px;
+    }
 
     @include vp-767 {
       margin: 0 0 27px;
@@ -103,10 +108,34 @@
   & label {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 9px;
 
     @include vp-767 {
       gap: 11px;
+    }
+  }
+
+  &--custom-select {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include vp-767 {
+      margin: 0 0 6px;
+    }
+
+    & > span {
+      color: $color-alabaster;
+      opacity: 0.8;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.3;
+      margin: 0;
+
+      @include vp-767 {
+        font-size: 12px;
+        line-height: 1.16;
+      }
     }
   }
 
@@ -119,6 +148,32 @@
       border-radius: 8px;
       padding: 16px 25px;
       height: 50px;
+      transition: border-color $trans-default;
+      color: $color-default-white;
+
+      @include hover-focus {
+        border-color: $color-default-white;
+      }
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+
+      &:disabled {
+        background-color: $color-default-white-20;
+        border-color: $color-default-white;
+        opacity: 0.4;
+        pointer-events: none;
+      }
+
+      &[aria-invalid="true"] {
+        border-color: $color-wild-watermelon;
+
+        @include hover-focus {
+          border-color: $color-wild-watermelon-50;
+        }
+      }
     }
 
     & span,
@@ -148,39 +203,56 @@
   }
 
   &--checkbox {
-    & span,
-    & p {
-      color: $color-alabaster;
-      opacity: 0.8;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 1.3;
-      margin: 0;
+    color: $color-alabaster;
+    opacity: 0.8;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0;
+    transition: opacity $trans-default;
+
+    &:has(input:disabled) {
+      pointer-events: none;
+    }
+
+    :has(input:focus) span {
+      opacity: 1;
+    }
+
+    & b {
+      font-weight: inherit;
+    }
+
+    @include hover-focus {
+      opacity: 1;
     }
 
     & label {
-      flex-direction: row;
-      align-items: center;
-      gap: 0;
+      flex-direction: column;
+      gap: 12px;
       padding: 0 0 0 30px;
       position: relative;
       cursor: pointer;
       min-height: 20px;
+      justify-content: center;
     }
 
-    & span {
+    & span:not(.input-message) {
       display: block;
       width: 20px;
       aspect-ratio: 1;
       border-radius: 2px;
       position: absolute;
       left: 0;
-      top: 50%;
-      translate: 0 -50%;
+      top: 0;
       background-color: transparent;
       border: 1px solid $color-default-white;
       opacity: 0.7;
-      transition: background-color $trans-default, opacity $trans-default;
+      transition: background-color $trans-default, opacity $trans-default, border-color $trans-default;
+
+      @include vp-767 {
+        top: 5px;
+      }
     }
 
     & svg {
@@ -201,8 +273,19 @@
       }
     }
 
+    & input[aria-invalid="true"] + span {
+      border-color: $color-wild-watermelon;
+    }
+
+    & input:disabled + span {
+      background-color: $color-default-white-60;
+      border-color: $color-default-white;
+      opacity: 1;
+    }
+
     & p {
       font-size: 12px;
+      margin: 3px 0 0;
     }
   }
 }
@@ -216,6 +299,7 @@
 }
 
 .feedback__img {
+  background-color: #c6bcb0;
   position: absolute;
   width: calc(100% - 200px);
   height: 100%;
@@ -247,4 +331,18 @@
   100% {
     opacity: 1;
   }
+}
+
+.feedback__form-field--checkbox:has(.input-message) {
+  padding: 0 0 20px;
+
+  @include vp-767 {
+    padding: 0 0 28px;
+  }
+}
+
+.feedback__form-field--checkbox .input-message {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
 }

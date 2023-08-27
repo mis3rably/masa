@@ -9,7 +9,8 @@ const newsSlidesList = document.querySelectorAll('.news__slider .swiper-slide');
 export const heroSlider = new Swiper('.hero', {
   slidesPerView: 'auto',
   effect: 'fade',
-  allowTouchMove: false,
+  loading: 'lazy',
+  loop: true,
 
   autoplay: {
     delay: 3000,
@@ -25,6 +26,7 @@ export const heroSlider = new Swiper('.hero', {
 export const curriculumSlider = new Swiper('.curriculum__slider', {
   slidesPerView: 1,
   spaceBetween: 15,
+  loading: 'lazy',
 
   breakpoints: {
     768: {
@@ -51,6 +53,7 @@ export const curriculumSlider = new Swiper('.curriculum__slider', {
 export const newsSlider = new Swiper('.news__slider', {
   slidesPerView: 1,
   spaceBetween: 20,
+  loading: 'lazy',
 
   grid: {
     rows: 2,

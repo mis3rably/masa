@@ -1,14 +1,14 @@
 .reviews {
   background-color: $color-alabaster;
-  padding: 65px 0 120px;
+  padding: 65px 0 122px;
   overflow: hidden;
 
   @include vp-1199 {
-    padding: 46px 0 94px;
+    padding: 46px 0 102px;
   }
 
   @include vp-767 {
-    padding: 40px 0 64px;
+    padding: 43px 0 64px;
   }
 }
 
@@ -18,7 +18,7 @@
 
 .reviews .section-title {
   color: $color-cerulean-blue;
-  margin: 0 0 46px;
+  margin: 0 0 41px;
 
   @include vp-1199 {
     margin: 0 0 40px;
@@ -34,10 +34,14 @@
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: 1200px) {
+    padding: 5px 0;
+  }
 }
 
 .reviews__slider {
-  margin: 0 0 40px;
+  margin: 0 0 35px;
 
   @media (min-width: $vp-1200) {
     overflow: hidden;
@@ -66,6 +70,9 @@
 }
 
 .reviews__reviewer-pic {
+  background-color: #ab8a6f;
+  border-radius: 90px;
+
   img {
     width: 100%;
     height: 100%;
@@ -99,6 +106,10 @@
   @include vp-767 {
     gap: 10px;
   }
+}
+
+.reviews__details {
+  flex-shrink: 0;
 }
 
 .reviews__details-list {
@@ -222,6 +233,25 @@
   aspect-ratio: 1;
   height: auto;
   margin: 0;
+  border-radius: 15px;
+  transition: background-color $trans-default;
+
+  @include hover-focus {
+    background-color: $color-default-white;
+  }
+
+  &:active .curriculum__nav-button-svg {
+    opacity: 0.7;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+
+    & .curriculum__nav-button-svg {
+      stroke: $color-mischka;
+    }
+  }
 
   svg {
     stroke: $color-cerulean-blue;

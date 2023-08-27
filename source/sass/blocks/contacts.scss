@@ -3,7 +3,7 @@
   padding: 120px 0;
 
   @include vp-1199 {
-    padding: 83px 0 100px;
+    padding: 79px 0 100px;
   }
 
   @include vp-767 {
@@ -118,15 +118,56 @@
 
 .contacts__details-link {
   color: inherit;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    bottom: -1px;
+    left: 0;
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  @include hover-focus {
+    outline: none;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+
+    &::before {
+      content: none;
+    }
+  }
 }
 
 .contacts__map {
   width: 100%;
   height: 500px;
   border-radius: 16px;
+  position: relative;
 
   @include vp-767 {
     height: auto;
     aspect-ratio: 1.21;
+  }
+}
+
+.contacts__map-bg {
+  position: absolute;
+  inset: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

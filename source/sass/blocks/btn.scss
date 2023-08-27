@@ -10,6 +10,7 @@
   transition: background-color $trans-default;
   justify-content: space-between;
   width: fit-content;
+  user-select: none;
   cursor: pointer;
 
   @include vp-1199 {
@@ -28,6 +29,8 @@
     border: 1px solid $color-cerulean-blue;
 
     @include hover-focus {
+      outline: none;
+
       & .btn__text {
         color: $color-default-white;
       }
@@ -59,17 +62,19 @@
     border: 1px solid $color-default-white;
 
     @include hover-focus {
+      outline: none;
+
       & .btn__text {
-        color: $color-default-white;
+        color: $color-cerulean-blue;
       }
 
-      background-color: $color-cerulean-blue;
+      background-color: $color-default-white;
 
       & .btn__svg-wrapper {
-        background-color: $color-default-white;
+        background-color: $color-cerulean-blue;
 
         & svg {
-          stroke: $color-cerulean-blue;
+          stroke: $color-default-white;
           rotate: 45deg;
         }
       }

@@ -22,6 +22,7 @@ export class ScrollLock {
 
   disableScrolling() {
     this._scrollTop = document.body.dataset.scroll = document.body.dataset.scroll ? document.body.dataset.scroll : this._getBodyScrollTop();
+    this._getScrollbarWidth();
     if (this._getScrollbarWidth()) {
       document.body.style.paddingRight = `${this._getScrollbarWidth()}px`;
       if (document.querySelector('.header') && document.querySelector('.hero .swiper-pagination') && window.matchMedia('(min-width: 1420px)').matches) {

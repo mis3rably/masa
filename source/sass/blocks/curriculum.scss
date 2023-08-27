@@ -95,6 +95,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
+  background-color: #706f67;
 
   &::after {
     content: "";
@@ -211,6 +212,7 @@
   @include hover-focus {
     rotate: 45deg;
     background-color: $color-default-white;
+    outline: none;
 
     & .curriculum__link-svg {
       stroke: $color-cerulean-blue;
@@ -253,6 +255,7 @@
 
   @include hover-focus {
     background-color: $color-default-white;
+    outline: none;
   }
 
   &:active .curriculum__nav-button-svg {
@@ -261,6 +264,7 @@
 
   &:disabled {
     pointer-events: none;
+    cursor: not-allowed;
 
     & .curriculum__nav-button-svg {
       stroke: $color-mischka;

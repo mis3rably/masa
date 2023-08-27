@@ -1,4 +1,4 @@
-/* stylelint-disable */
+/* stylelint-leble */
 /**
  * Swiper 7.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -298,7 +298,27 @@
   border-radius: 50%;
   background: var(--swiper-pagination-bullet-inactive-color, #000);
   opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
 }
+
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      background-color: #316DC2;
+      opacity: 0.5;
+    }
+  }
+
+  &.focus-visible:active {
+    opacity: 0.9;
+  }
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  cursor: auto;
+}
+
 button.swiper-pagination-bullet {
   border: none;
   margin: 0;
@@ -306,9 +326,6 @@ button.swiper-pagination-bullet {
   box-shadow: none;
   -webkit-appearance: none;
           appearance: none;
-}
-.swiper-pagination-clickable .swiper-pagination-bullet {
-  cursor: pointer;
 }
 .swiper-pagination-bullet:only-child {
   display: none !important;

@@ -19,7 +19,7 @@
   margin: 0 0 40px;
 
   @include vp-1199 {
-    aspect-ratio: 0.9;
+    aspect-ratio: 0.88;
   }
 
   @include vp-767 {
@@ -87,6 +87,11 @@
   transition: border-color $trans-default, opacity $trans-default;
   opacity: 0.6;
 
+  @include hover-focus {
+    opacity: 1;
+    outline: none;
+  }
+
   @include vp-1199 {
     padding: 12px 19px;
   }
@@ -121,7 +126,7 @@
   overflow: hidden;
 
   @include vp-1199 {
-    height: calc(50% - 28px);
+    height: calc(50% - 32px);
   }
 
   @include vp-767 {
@@ -154,6 +159,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
+  background-color: #685b4c;
 
   img {
     width: 100%;
@@ -296,6 +302,17 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: rotate $trans-default, background-color $trans-default;
+
+  @include hover-focus {
+    rotate: 45deg;
+    background-color: $color-default-white;
+    outline: none;
+
+    & svg {
+      stroke: $color-cerulean-blue;
+    }
+  }
 
   svg {
     stroke: $color-default-white;
@@ -308,6 +325,8 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  border-radius: 50%;
+  transition: background-color $trans-default;
 
   svg {
     stroke: $color-cerulean-blue;
@@ -319,6 +338,25 @@
 
   &--next svg {
     rotate: 45deg;
+  }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    outline: none;
+  }
+
+  &:active .curriculum__nav-button-svg {
+    opacity: 0.7;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.35;
+
+    & .curriculum__nav-button-svg {
+      stroke: $color-mischka;
+    }
   }
 }
 
@@ -344,20 +382,32 @@
   justify-content: center;
   align-items: center;
   background-color: transparent;
+  border: 1px solid transparent;
   color: $color-cerulean-blue;
   opacity: 0.5;
-  transition: background-color $trans-default, opacity $trans-default, color $trans-default;
+  transition: background-color $trans-default, opacity $trans-default, color $trans-default, border-color $trans-default;
   overflow: hidden;
+  user-select: none;
+  border-radius: 20px;
+
+  @include hover-focus {
+    opacity: 1;
+    border-color: $color-cerulean-blue;
+    background-color: transparent;
+    outline: none;
+  }
 
   @include vp-767 {
     min-width: 26px;
     min-height: 26px;
     font-size: 14px;
+    padding: 6px 8px;
   }
 
   &-active {
     background-color: $color-cerulean-blue;
     color: $color-default-white;
     opacity: 1;
+    pointer-events: none;
   }
 }
