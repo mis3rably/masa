@@ -32,7 +32,7 @@
           <nav class="header__menu">
             <ul class="header__menu-list" data-accordion="parent">
               <li class="header__menu-item">
-                <a class="header__menu-link" href="">О проекте</a>
+                <a class="header__menu-link" href="#about">О проекте</a>
               </li>
               <li class="header__menu-item" data-accordion="element">
                 <button class="header__menu-link header__menu-link--accordion" type="button" data-accordion="button">
@@ -43,24 +43,24 @@
                 </button>
                 <ul class="header__submenu-list" data-accordion="content">
                   <li class="header__submenu-item">
-                    <a class="header__submenu-link" href="">Стажировки</a>
+                    <a class="header__submenu-link" href="#curriculum">Стажировки</a>
                   </li>
                   <li class="header__submenu-item">
-                    <a class="header__submenu-link" href="">Волонтёрство</a>
+                    <a class="header__submenu-link" href="#curriculum">Волонтёрство</a>
                   </li>
                   <li class="header__submenu-item">
-                    <a class="header__submenu-link" href="">Учеба</a>
+                    <a class="header__submenu-link" href="#curriculum">Учеба</a>
                   </li>
                   <li class="header__submenu-item">
-                    <a class="header__submenu-link" href="">Религия</a>
+                    <a class="header__submenu-link" href="#curriculum">Религия</a>
                   </li>
                 </ul>
               </li>
               <li class="header__menu-item">
-                <a class="header__menu-link" href="">Как поехать</a>
+                <a class="header__menu-link" href="#requirements">Как поехать</a>
               </li>
               <li class="header__menu-item">
-                <a class="header__menu-link" href="">Отзывы</a>
+                <a class="header__menu-link" href="#reviews">Отзывы</a>
               </li>
               <li class="header__menu-item" data-accordion="element">
                 <button class="header__menu-link header__menu-link--accordion" type="button" data-accordion="button">
@@ -71,24 +71,24 @@
                 </button>
                 <ul class="header__submenu-list" data-accordion="content">
                   <li class="header__submenu-item">
-                    <a class="header__submenu-link" href="">Общее</a>
+                    <a class="header__submenu-link" href="#news">Общее</a>
                   </li>
                   <li class="header__submenu-item">
-                    <a class="header__submenu-link" href="">Волонтёрство</a>
+                    <a class="header__submenu-link" href="#news">Волонтёрство</a>
                   </li>
                   <li class="header__submenu-item">
-                    <a class="header__submenu-link" href="">Стажировки</a>
+                    <a class="header__submenu-link" href="#news">Стажировки</a>
                   </li>
                   <li class="header__submenu-item">
-                    <a class="header__submenu-link" href="">Карьера</a>
+                    <a class="header__submenu-link" href="#news">Карьера</a>
                   </li>
                   <li class="header__submenu-item">
-                    <a class="header__submenu-link" href="">Путешествия</a>
+                    <a class="header__submenu-link" href="#news">Путешествия</a>
                   </li>
                 </ul>
               </li>
               <li class="header__menu-item">
-                <a class="header__menu-link" href="">Контакты</a>
+                <a class="header__menu-link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -119,11 +119,11 @@
                 <div class="hero__button-wrapper">
                   <button class="btn btn--light-bg" type="button" data-open-modal="modal-1">
                     <span class="btn__text">Подробнее</span>
-                    <div class="btn__svg-wrapper">
+                    <span class="btn__svg-wrapper">
                       <svg class="btn__svg" width="8" height="8">
                         <use href="img/sprite.svg#arrow-btn"></use>
                       </svg>
-                    </div>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -149,11 +149,11 @@
                 <div class="hero__button-wrapper">
                   <button class="btn btn--light-bg" type="button" data-open-modal="modal-1">
                     <span class="btn__text">Подробнее</span>
-                    <div class="btn__svg-wrapper">
+                    <span class="btn__svg-wrapper">
                       <svg class="btn__svg" width="8" height="8">
                         <use href="img/sprite.svg#arrow-btn"></use>
                       </svg>
-                    </div>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -179,11 +179,11 @@
                 <div class="hero__button-wrapper">
                   <button class="btn btn--light-bg" type="button" data-open-modal="modal-1">
                     <span class="btn__text">Подробнее</span>
-                    <div class="btn__svg-wrapper">
+                    <span class="btn__svg-wrapper">
                       <svg class="btn__svg" width="8" height="8">
                         <use href="img/sprite.svg#arrow-btn"></use>
                       </svg>
-                    </div>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -194,7 +194,7 @@
           <div class="swiper-pagination"></div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <div class="about__text-wrapper">
             <div class="about__heading-wrapper">
@@ -265,7 +265,7 @@
           </div>
         </div>
       </section>
-      <section class="curriculum">
+      <section class="curriculum" id="curriculum">
         <div class="container">
         <h2 class="section-title">Программы</h2>
           <a class="btn btn--light-bg" href="#">
@@ -402,7 +402,7 @@
           </div>
         </div>
       </section>
-      <section class="requirements">
+      <section class="requirements" id="requirements">
         <div class="container">
           <div class="requirements__content-wrapper">
             <div class="requirements__column">
@@ -434,7 +434,7 @@
           </div>
         </div>
       </section>
-      <section class="news">
+      <section class="news" id="news">
         <div class="container">
           <h2 class="section-title">Новости и материалы</h2>
           <ul class="news__filter-list">
@@ -642,7 +642,7 @@
         </ul>
         </div>
       </section>
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <div class="container">
           <h2 class="section-title">Отзывы</h2>
           <div class="reviews__slider">
@@ -766,7 +766,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container">
           <div class="contacts__content-wrapper">
             <h2 class="section-title">Контакты</h2>
@@ -781,7 +781,7 @@
                 <ul class="contacts__details-list">
                   <li class="contacts__detail-name">Телефон</li>
                   <li class="contacts__detail-content">
-                    <a class="contacts__details-link" href="tel: +796387687676">+7 963 876 876 76</a>
+                    <a class="contacts__details-link" href="tel:+796387687676">+7 963 876 876 76</a>
                   </li>
                 </ul>
               </li>
@@ -789,13 +789,24 @@
                 <ul class="contacts__details-list">
                   <li class="contacts__detail-name">E-mail</li>
                   <li class="contacts__detail-content">
-                    <a class="contacts__details-link" href="mailto: info@masa.ru">Info@masa.ru</a>
+                    <a class="contacts__details-link" href="mailto:info@masa.ru">Info@masa.ru</a>
                   </li>
                 </ul>
               </li>
             </ul>
           </div>
-          <div class="contacts__map" id="contacts-map"></div>
+          <div class="contacts__map" id="contacts-map">
+            <div class="contacts__map-bg">
+              <picture>
+                <source media="(max-width: 767px)" type="image/webp" srcset="img/map/map-mobile.webp, img/map/map-mobile@2x.webp 2x">
+                <source media="(max-width: 1199px)" type="image/webp" srcset="img/map/map-tablet.webp, img/map/map-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/map/map.webp, img/map/map@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/map/map-mobile.jpg, img/map/map-mobile@2x.jpg 2x">
+                <source media="(max-width: 1199px)" srcset="img/map/map-tablet.jpg, img/map/map-tablet@2x.jpg 2x">
+                <img src="img/map/map.jpg" srcset="img/map/map@2x.jpg 2x" alt="Фотография слайда 1." width="1240" height="500">
+              </picture>
+            </div>
+          </div>
         </div>
       </section>
       <section class="feedback">
@@ -811,79 +822,79 @@
           <div class="feedback__content">
             <h2 class="feedback__title">Напишите нам</h2>
             <p class="feedback__desc">Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
-            <div class="feedback__form-wrapper">
+            <div class="feedback__form-wrapper" data-form-validate>
               <form action="https://echo.htmlacademy.ru/courses" method="get">
                 <div class="feedback__form-field feedback__form-field--text">
-                  <label>
+                  <label data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-required>
                     <span>Имя</span>
                     <input type="text" name="name">
                   </label>
                 </div>
                 <div class="feedback__form-field feedback__form-field--text">
-                  <label>
+                  <label data-validate-type="phone" data-on-input-validate="" data-message-base="Поле обязательно к заполнению" data-required data-phone-length="18">
                     <span>Телефон</span>
                     <input type="tel" name="phone-number">
                   </label>
                 </div>
                 <div class="feedback__form-field feedback__form-field--text feedback__form-field--textarea">
-                  <label>
+                  <label data-validate-type="text" data-limitation="letters-and-digit" data-message-base="Поле обязательно к заполнению" data-required>
                     <span>Ваше сообщение</span>
                     <textarea cols="30" rows="10" name="message"></textarea>
                   </label>
                 </div>
-                <div class="feedback__form-field dropdown">
-                  <p class="dropdown__name">Выберите город</p>
-                  <div class="dropdown__wrapper">
-                    <span class="dropdown__text"></span>
-                    <svg class="dropdown__svg" width="16" height="16">
-                      <use href="img/sprite.svg#caret"></use>
-                    </svg>
+                <div class="feedback__form-field feedback__form-field--custom-select">
+                  <span>Выберите город</span>
+                  <div class="custom-select" data-select data-validate-type="toggle-group" data-message-base="Необходимо выбрать город">
+                    <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                      <span class="custom-select__text"></span>
+                      <span class="custom-select__icon"></span>
+                    </button>
+                    <ul class="custom-select__list">
+                      <li class="custom-select__item">
+                        <label class="custom-select__item-label" tabindex="0" data-select-value="saint-petersburg">
+                          Санкт-Петербург
+                          <input class="visually-hidden" tabindex="-1" type="radio" name="city" value="saint-petersburg">
+                        </label>
+                      </li>
+                      <li class="custom-select__item">
+                        <label class="custom-select__item-label" tabindex="0" data-select-value="kaliningrad">
+                          Калининград
+                          <input class="visually-hidden" tabindex="-1" type="radio" name="city" value="kaliningrad">
+                        </label>
+                      </li>
+                      <li class="custom-select__item">
+                        <label class="custom-select__item-label" tabindex="0" data-select-value="moscow">
+                          Москва
+                          <input class="visually-hidden" tabindex="-1" type="radio" name="city" value="moscow">
+                        </label>
+                      </li>
+                      <li class="custom-select__item">
+                        <label class="custom-select__item-label" tabindex="0" data-select-value="novosibirsk">
+                          Новосибирск
+                          <input class="visually-hidden" tabindex="-1" type="radio" name="city" value="novosibirsk">
+                        </label>
+                      </li>
+                    </ul>
                   </div>
-                  <ul class="dropdown__list">
-                    <li class="dropdown__item">
-                      <label>
-                        <input class="visually-hidden" type="radio" name="city" value="saint-petersburg">
-                        <span>Санкт-Петербург</span>
-                      </label>
-                    </li>
-                    <li class="dropdown__item">
-                      <label>
-                        <input class="visually-hidden" type="radio" name="city" value="kaliningrad">
-                        <span>Калининград</span>
-                      </label>
-                    </li>
-                    <li class="dropdown__item">
-                      <label>
-                        <input class="visually-hidden" type="radio" name="city" value="moscow">
-                        <span>Москва</span>
-                      </label>
-                    </li>
-                    <li class="dropdown__item">
-                      <label>
-                        <input class="visually-hidden" type="radio" name="city" value="novosibirsk">
-                        <span>Новосибирск</span>
-                      </label>
-                    </li>
-                  </ul>
                 </div>
                 <div class="feedback__form-field feedback__form-field--checkbox">
-                  <label>
+                  <label data-validate-type="checkbox" data-message-base="Для отправки сообщения примите согласие на обработку персональных данных">
                     <input class="visually-hidden" type="checkbox">
                     <span>
                       <svg width="8" height="8">
                         <use href="img/sprite.svg#tick"></use>
                       </svg>
                     </span>
-                    <p>Я&nbsp;согласен на&nbsp;обработку моих персональных данных</p>
+                    <b>Я&nbsp;согласен на&nbsp;обработку моих персональных данных</b>
                   </label>
                 </div>
                 <button class="btn btn--blue-bg" type="submit">
                   <span class="btn__text">Отправить</span>
-                  <div class="btn__svg-wrapper">
+                  <span class="btn__svg-wrapper">
                     <svg class="btn__svg" width="8" height="8">
                       <use href="img/sprite.svg#arrow-btn"></use>
                     </svg>
-                  </div>
+                  </span>
                 </button>
               </form>
             </div>
@@ -899,41 +910,41 @@
         </a>
         <ul class="footer__nav-list">
           <li class="footer__nav-item">
-            <a class="footer__nav-link" href="">О проекте</a>
+            <a class="footer__nav-link" href="#about">О проекте</a>
           </li>
           <li class="footer__nav-item">
-            <a class="footer__nav-link" href="">Программы</a>
+            <a class="footer__nav-link" href="#programs">Программы</a>
           </li>
           <li class="footer__nav-item">
-            <a class="footer__nav-link" href="">Как поехать</a>
+            <a class="footer__nav-link" href="#requirements">Как поехать</a>
           </li>
           <li class="footer__nav-item">
-            <a class="footer__nav-link" href="">Отзывы</a>
+            <a class="footer__nav-link" href="#reviews">Отзывы</a>
           </li>
           <li class="footer__nav-item">
-            <a class="footer__nav-link" href="">Новости</a>
+            <a class="footer__nav-link" href="#news">Новости</a>
           </li>
           <li class="footer__nav-item">
-            <a class="footer__nav-link" href="">Контакты</a>
+            <a class="footer__nav-link" href="#contacts">Контакты</a>
           </li>
         </ul>
         <ul class="footer__socials-list">
           <li class="footer__socials-item">
-            <a class="footer__socials-link" href="" aria-label="Ссылка на ВКонтакте.">
+            <a class="footer__socials-link" href="#" aria-label="Ссылка на ВКонтакте.">
               <svg class="footer__socials-svg" width="16" height="16">
                 <use href="img/sprite.svg#vk"></use>
               </svg>
             </a>
           </li>
           <li class="footer__socials-item">
-            <a class="footer__socials-link" href="" aria-label="Ссылка на Одноклассники.">
+            <a class="footer__socials-link" href="#" aria-label="Ссылка на Одноклассники.">
               <svg class="footer__socials-svg" width="16" height="16">
                 <use href="img/sprite.svg#ok"></use>
               </svg>
             </a>
           </li>
           <li class="footer__socials-item">
-            <a class="footer__socials-link" href="" aria-label="Ссылка на Реддит.">
+            <a class="footer__socials-link" href="#" aria-label="Ссылка на Реддит.">
               <svg class="footer__socials-svg" width="16" height="16">
                 <use href="img/sprite.svg#reddit"></use>
               </svg>
@@ -954,74 +965,76 @@
           <button class="modal__close-btn" type="button" data-close-modal></button>
           <h2 class="modal__title">Напишите нам</h2>
           <p class="modal__desc">Оставьте ваши контакты, <br> если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
-          <form class="modal__form" action="https://echo.htmlacademy.ru/courses" method="get">
-            <div class="modal__form-field modal__form-field--text">
-              <label>
-                <span>Имя</span>
-                <input type="text" name="name">
-              </label>
-            </div>
-            <div class="modal__form-field modal__form-field--text">
-              <label>
-                <span>Телефон</span>
-                <input type="tel" name="phone-number">
-              </label>
-            </div>
-            <div class="modal__form-field dropdown dropdown--light">
-              <p class="dropdown__name">Выберите город</p>
-              <div class="dropdown__wrapper">
-                <span class="dropdown__text"></span>
-                <svg class="dropdown__svg" width="16" height="16">
-                  <use href="img/sprite.svg#caret"></use>
-                </svg>
+          <div class="modal__form-wrapper" data-form-validate>
+            <form action="https://echo.htmlacademy.ru/courses" method="get">
+              <div class="modal__form-field modal__form-field--text">
+                <label data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-required>
+                  <span>Имя</span>
+                  <input data-focus type="text" name="name">
+                </label>
               </div>
-              <ul class="dropdown__list">
-                <li class="dropdown__item">
-                  <label>
-                    <input class="visually-hidden" type="radio" name="city" value="saint-petersburg">
-                    <span>Санкт-Петербург</span>
-                  </label>
-                </li>
-                <li class="dropdown__item">
-                  <label>
-                    <input class="visually-hidden" type="radio" name="city" value="kaliningrad">
-                    <span>Калининград</span>
-                  </label>
-                </li>
-                <li class="dropdown__item">
-                  <label>
-                    <input class="visually-hidden" type="radio" name="city" value="moscow">
-                    <span>Москва</span>
-                  </label>
-                </li>
-                <li class="dropdown__item">
-                  <label>
-                    <input class="visually-hidden" type="radio" name="city" value="novosibirsk">
-                    <span>Новосибирск</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-            <div class="modal__form-field modal__form-field--checkbox">
-              <label>
-                <input class="visually-hidden" type="checkbox">
-                <span>
-                  <svg width="8" height="8">
-                    <use href="img/sprite.svg#tick"></use>
+              <div class="modal__form-field modal__form-field--text">
+                <label data-validate-type="phone" data-on-input-validate="" data-message-base="Поле обязательно к заполнению" data-required data-phone-length="18">
+                  <span>Телефон</span>
+                  <input type="tel" name="phone-number">
+                </label>
+              </div>
+              <div class="modal__form-field modal__form-field--custom-select">
+                <span>Выберите город</span>
+                <div class="custom-select custom-select--light open-up" data-select data-validate-type="toggle-group" data-message-base="Необходимо выбрать город">
+                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                    <span class="custom-select__text"></span>
+                    <span class="custom-select__icon"></span>
+                  </button>
+                  <ul class="custom-select__list">
+                    <li class="custom-select__item">
+                      <label class="custom-select__item-label" tabindex="0" data-select-value="saint-petersburg">
+                        Санкт-Петербург
+                        <input class="visually-hidden" tabindex="-1" type="radio" name="city" value="saint-petersburg">
+                      </label>
+                    </li>
+                    <li class="custom-select__item">
+                      <label class="custom-select__item-label" tabindex="0" data-select-value="kaliningrad">
+                        Калининград
+                        <input class="visually-hidden" tabindex="-1" type="radio" name="city" value="kaliningrad">
+                      </label>
+                    </li>
+                    <li class="custom-select__item">
+                      <label class="custom-select__item-label" tabindex="0" data-select-value="moscow">
+                        Москва
+                        <input class="visually-hidden" tabindex="-1" type="radio" name="city" value="moscow">
+                      </label>
+                    </li>
+                    <li class="custom-select__item">
+                      <label class="custom-select__item-label" tabindex="0" data-select-value="novosibirsk">
+                        Новосибирск
+                        <input class="visually-hidden" tabindex="-1" type="radio" name="city" value="novosibirsk">
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal__form-field modal__form-field--checkbox">
+                <label data-validate-type="checkbox" data-message-base="Для отправки сообщения примите согласие на обработку персональных данных">
+                  <input class="visually-hidden" type="checkbox">
+                  <span>
+                    <svg width="8" height="8">
+                      <use href="img/sprite.svg#tick"></use>
+                    </svg>
+                  </span>
+                  <b>Я&nbsp;согласен на&nbsp;обработку моих персональных данных</b>
+                </label>
+              </div>
+              <button class="btn btn--light-bg" type="submit">
+                <span class="btn__text">Отправить</span>
+                <span class="btn__svg-wrapper">
+                  <svg class="btn__svg" width="8" height="8">
+                    <use href="img/sprite.svg#arrow-btn"></use>
                   </svg>
                 </span>
-                <p>Я&nbsp;согласен на&nbsp;обработку моих персональных данных</p>
-              </label>
-            </div>
-            <button class="btn btn--light-bg" type="submit" data-close-modal>
-              <span class="btn__text">Отправить</span>
-              <div class="btn__svg-wrapper">
-                <svg class="btn__svg" width="8" height="8">
-                  <use href="img/sprite.svg#arrow-btn"></use>
-                </svg>
-              </div>
-            </button>
-          </form>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
