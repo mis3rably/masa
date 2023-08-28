@@ -4293,6 +4293,7 @@ button,
   line-height: 1.3;
   color: #316dc2;
   max-width: 100px;
+  word-wrap: break-word;
   margin: 0;
 }
 
