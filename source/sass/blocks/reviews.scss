@@ -41,10 +41,14 @@
 }
 
 .reviews__slider {
-  margin: 0 0 35px;
+  margin: 0 0 31px;
 
   @media (min-width: $vp-1200) {
     overflow: hidden;
+  }
+
+  @include vp-1199 {
+    margin: 0 0 34px;
   }
 
   @include vp-767 {
