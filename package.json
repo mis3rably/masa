@@ -22,9 +22,9 @@
     "*.js",
     "source/**/*.html",
     "source/**/*.pug",
-    "source/js/**/*.js",
+    "source/js/**/*.js, { ignore: 'js/vendor/**' }",
     "source/img/**/*.svg",
-    "source/sass/**/*.{sass,scss}"
+    "source/sass/**/*.{sass,scss}, { ignore: 'sass/vendor/**' }"
   ],
   "devDependencies": {
     "@babel/preset-env": "7.18.6",
