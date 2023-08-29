@@ -5326,6 +5326,7 @@ button,
   line-height: 1.3;
   color: #316dc2;
   max-width: 100px;
+  word-wrap: break-word;
   margin: 0;
 }
 @media (max-width: 1199px) {
@@ -6665,7 +6666,7 @@ button,
 }
 .custom-select__list {
   position: absolute;
-  bottom: -8px;
+  bottom: 0;
   z-index: 1;
   border-radius: 8px;
   width: 100%;
@@ -6767,6 +6768,7 @@ button,
 .custom-select.is-open .custom-select__list {
   visibility: visible;
   opacity: 1;
+  bottom: 28px;
 }
 .custom-select.is-open .custom-select__icon {
   -webkit-transform: rotate(180deg);
