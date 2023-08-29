@@ -5297,7 +5297,7 @@ button,
 
 .custom-select__list {
   position: absolute;
-  bottom: 0;
+  bottom: -8px;
   z-index: 1;
   border-radius: 8px;
   width: 100%;
@@ -5405,7 +5405,6 @@ button,
 .custom-select.is-open .custom-select__list {
   visibility: visible;
   opacity: 1;
-  bottom: 28px;
 }
 
 .custom-select.is-open .custom-select__icon {
@@ -5507,6 +5506,10 @@ button,
 
 .custom-select--light .custom-select__text {
   color: #484848;
+}
+
+.custom-select:not(.open-up):has(.input-message) .custom-select__list {
+  bottom: 19px;
 }
 
 /* @mixin hover-focus {
