@@ -145,6 +145,7 @@ if (newsFilterList && newsSlidesList && newsSlider && newsSlidesContainer) {
 export const reviewsSlider = new Swiper('.reviews__slider', {
   slidesPerView: 1,
   spaceBetween: 15,
+  loading: 'lazy',
 
   breakpoints: {
     768: {
