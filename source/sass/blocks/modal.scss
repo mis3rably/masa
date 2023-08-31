@@ -226,8 +226,10 @@
         transition: border-color $trans-default;
 
         @include hover-focus {
-          outline: none;
-          border-color: $color-charcoal;
+          &:not(:disabled) {
+            outline: none;
+            border-color: $color-charcoal;
+          }
         }
 
         @include vp-767 {
@@ -236,10 +238,17 @@
 
         &[aria-invalid="true"] {
           border-color: $color-wild-watermelon;
+          background-color: $color-wild-watermelon-20;
 
           @include hover-focus {
             border-color: $color-wild-watermelon-50;
           }
+        }
+
+        &:disabled {
+          pointer-events: none;
+          border-color: $color-mischka-50;
+          background-color: $color-mischka-20;
         }
       }
 
@@ -282,6 +291,21 @@
         position: relative;
         cursor: pointer;
         min-height: 20px;
+
+        @include hover-focus {
+          span {
+            border-color: $color-charcoal;
+          }
+
+          b {
+            opacity: 1;
+          }
+        }
+      }
+
+      & label.is-invalid span {
+        border-color: $color-wild-watermelon;
+        background-color: $color-wild-watermelon-20;
       }
 
       & span:not(.input-message) {
@@ -294,9 +318,9 @@
         top: 50%;
         translate: 0 -50%;
         background-color: transparent;
-        border: 1px solid $color-cerulean-blue;
+        border: 1px solid $color-charcoal-30;
         opacity: 0.7;
-        transition: background-color $trans-default, opacity $trans-default;
+        transition: background-color $trans-default, opacity $trans-default, border-color $trans-default;
       }
 
       & svg {
@@ -309,11 +333,11 @@
       }
 
       & input:checked + span {
-        background-color: $color-cerulean-blue;
+        background-color: $color-default-white;
         opacity: 1;
 
         & svg {
-          stroke: $color-default-white;
+          stroke: $color-cerulean-blue;
         }
       }
 

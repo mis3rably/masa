@@ -1,14 +1,10 @@
 .header {
-  padding: 20px 0;
+  padding: 30px 0;
   position: absolute;
   left: 50%;
   translate: -50% 0;
   width: 100%;
   z-index: 1;
-
-  @include vp-1199 {
-    padding: 30px 0;
-  }
 
   @include vp-767 {
     padding: 20px 0;
@@ -75,13 +71,17 @@
     content: "";
     z-index: -1;
   }
+
+  & .header__menu-list {
+    padding: 3px 0;
+  }
 }
 
 .header__menu-button {
   background-color: $color-default-white;
   border: 1px solid $color-cerulean-blue;
   border-radius: 30px;
-  padding: 4px 4px 4px 20px;
+  padding: 3px 4px 3px 19px;
   display: flex;
   gap: 20px;
   align-items: center;
@@ -168,7 +168,7 @@
   position: absolute;
   top: 60px;
   height: 0;
-  max-height: 405px;
+  max-height: 396px;
 }
 
 .header__menu > * {
@@ -177,11 +177,12 @@
 
 .header__menu-wrapper.opened .header__menu {
   grid-template-rows: 1fr;
-  padding-top: 32px;
-  padding-bottom: 35px;
+  padding-top: 28px;
+  padding-bottom: 29px;
   padding-left: 25px;
   padding-right: 25px;
-  height: 70vh;
+  height: fit-content;
+  max-height: 65vh;
 }
 
 .header__menu-list {

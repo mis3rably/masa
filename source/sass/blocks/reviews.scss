@@ -1,14 +1,14 @@
 .reviews {
   background-color: $color-alabaster;
-  padding: 65px 0 122px;
+  padding: 65px 0 120px;
   overflow: hidden;
 
   @include vp-1199 {
-    padding: 46px 0 102px;
+    padding: 48px 0 101px;
   }
 
   @include vp-767 {
-    padding: 43px 0 64px;
+    padding: 37px 0 64px;
   }
 }
 
@@ -48,7 +48,7 @@
   }
 
   @include vp-1199 {
-    margin: 0 0 34px;
+    margin: 0 0 38px;
   }
 
   @include vp-767 {

@@ -1,14 +1,14 @@
 .requirements {
   background-color: $color-cerulean-blue;
   color: $color-default-white;
-  padding: 120px 0 107px;
+  padding: 120px 0 108px;
 
   @include vp-1199 {
     padding: 100px 0;
   }
 
   @include vp-767 {
-    padding: 72px 0 68px;
+    padding: 68px 0 70px;
   }
 }
 
@@ -20,7 +20,7 @@
   }
 
   @include vp-767 {
-    margin: 0 0 10px;
+    margin: 0 0 13px;
   }
 }
 
@@ -54,7 +54,7 @@
   }
 
   @include vp-767 {
-    gap: 23px;
+    gap: 26px;
   }
 }
 
@@ -84,7 +84,7 @@
   @include vp-767 {
     font-size: 18px;
     line-height: 1.2;
-    margin: 10px 0 14px;
+    margin: 10px 0 11px;
   }
 }
 

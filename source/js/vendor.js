@@ -5,6 +5,8 @@ import L from './vendor/leaflet';
 const newsFilterList = document.querySelector('.news__filter-list');
 const newsSlidesContainer = document.querySelector('.news__slider .swiper-wrapper');
 const newsSlidesList = document.querySelectorAll('.news__slider .swiper-slide');
+const heroSliderList = document.querySelectorAll('.hero .swiper-slide');
+const heroPagination = document.querySelector('.hero__pagination-wrapper');
 
 export const heroSlider = new Swiper('.hero', {
   slidesPerView: 'auto',
@@ -17,11 +19,30 @@ export const heroSlider = new Swiper('.hero', {
     disableOnInteraction: false,
   },
 
+  on: {
+    slideChange() {
+      if (heroSliderList && heroPagination) {
+        const currentSlideIndex = this.realIndex;
+        heroPagination.style.top = `${Math.round(parseInt(window.getComputedStyle(heroSliderList[currentSlideIndex]
+            .querySelector('.hero__slide-wrapper'))
+            .getPropertyValue('margin-top'), 10)) - Math.round(parseInt(window.getComputedStyle(heroPagination)
+            .getPropertyValue('height'), 10)) + 1}px`;
+      }
+    },
+  },
+
   pagination: {
     el: '.hero .swiper-pagination',
     clickable: true,
   },
 });
+
+if (heroPagination) {
+  heroPagination.style.top = `${Math.round(parseInt(window.getComputedStyle(document.querySelector('.hero .swiper-slide-active')
+      .querySelector('.hero__slide-wrapper'))
+      .getPropertyValue('margin-top'), 10)) - Math.round(parseInt(window.getComputedStyle(heroPagination)
+      .getPropertyValue('height'), 10)) + 1}px`;
+}
 
 export const curriculumSlider = new Swiper('.curriculum__slider', {
   slidesPerView: 1,
@@ -108,6 +129,10 @@ if (newsFilterList && newsSlidesList && newsSlider && newsSlidesContainer) {
     if (breakpoint.matches && newsSlidesContainer.style.width !== null) {
       newsSlidesContainer.style.width = null;
     }
+    heroPagination.style.top = `${Math.round(parseInt(window.getComputedStyle(document.querySelector('.hero .swiper-slide-active')
+        .querySelector('.hero__slide-wrapper'))
+        .getPropertyValue('margin-top'), 10)) - Math.round(parseInt(window.getComputedStyle(heroPagination)
+        .getPropertyValue('height'), 10)) + 1}px`;
   });
 
   newsFilterList.addEventListener('click', (evt) => {

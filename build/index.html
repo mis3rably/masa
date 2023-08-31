@@ -112,19 +112,19 @@
             </div>
             <div class="hero__slide-wrapper">
               <h2>Программы стажировок в&nbsp;крупнейших компаниях Израиля</h2>
-              <div class="hero__desc-wrapper">
+              <div class="hero__desc-wrapper hero__desc-wrapper--higher-padding">
                 <p>
                   Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных организациях.
                 </p>
                 <div class="hero__button-wrapper">
-                  <button class="btn btn--light-bg" type="button" data-open-modal="modal-1">
+                  <a class="btn btn--light-bg">
                     <span class="btn__text">Подробнее</span>
                     <span class="btn__svg-wrapper">
                       <svg class="btn__svg" width="8" height="8">
                         <use href="img/sprite.svg#arrow-btn"></use>
                       </svg>
                     </span>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -142,19 +142,19 @@
             </div>
             <div class="hero__slide-wrapper">
               <h2>Волонтёрские программы &mdash;внесите свой вклад в&nbsp;общество</h2>
-              <div class="hero__desc-wrapper">
+              <div class="hero__desc-wrapper hero__desc-wrapper--higher-padding">
                 <p>
                   Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и&nbsp;другое.
                 </p>
                 <div class="hero__button-wrapper">
-                  <button class="btn btn--light-bg" type="button" data-open-modal="modal-1">
+                  <a class="btn btn--light-bg">
                     <span class="btn__text">Подробнее</span>
                     <span class="btn__svg-wrapper">
                       <svg class="btn__svg" width="8" height="8">
                         <use href="img/sprite.svg#arrow-btn"></use>
                       </svg>
                     </span>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -177,14 +177,14 @@
                   Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая настоящий израильский стиль жизни!
                 </p>
                 <div class="hero__button-wrapper">
-                  <button class="btn btn--light-bg" type="button" data-open-modal="modal-1">
+                  <a class="btn btn--light-bg">
                     <span class="btn__text">Подробнее</span>
                     <span class="btn__svg-wrapper">
                       <svg class="btn__svg" width="8" height="8">
                         <use href="img/sprite.svg#arrow-btn"></use>
                       </svg>
                     </span>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -209,14 +209,14 @@
                 и&nbsp;еврейские общины во&nbsp;всем мире. Цель центра&nbsp;&mdash; наделить этих людей способностью инициировать
                 значимые изменения.
               </p>
-              <a class="btn btn--light-bg" href="#">
+              <button class="btn btn--light-bg" type="button" data-open-modal="modal-1">
                 <span class="btn__text">Подробнее о проекте</span>
                 <div class="btn__svg-wrapper">
                   <svg class="btn__svg" width="8" height="8">
                     <use href="img/sprite.svg#arrow-btn"></use>
                   </svg>
                 </div>
-              </a>
+              </button>
             </div>
           </div>
           <div class="about__list-wrapper">
@@ -825,26 +825,26 @@
             <div class="feedback__form-wrapper" data-form-validate>
               <form action="https://echo.htmlacademy.ru/courses" method="get">
                 <div class="feedback__form-field feedback__form-field--text">
-                  <label data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-required>
+                  <label data-validate-type="text" data-limitation="name" data-required>
                     <span>Имя</span>
                     <input type="text" name="name">
                   </label>
                 </div>
                 <div class="feedback__form-field feedback__form-field--text">
-                  <label data-validate-type="phone" data-on-input-validate="" data-message-base="Поле обязательно к заполнению" data-required data-phone-length="18">
+                  <label data-validate-type="phone" data-on-input-validate="" data-required data-phone-length="18">
                     <span>Телефон</span>
                     <input type="tel" name="phone-number">
                   </label>
                 </div>
                 <div class="feedback__form-field feedback__form-field--text feedback__form-field--textarea">
-                  <label data-validate-type="text" data-limitation="letters-and-digit" data-message-base="Поле обязательно к заполнению" data-required>
+                  <label data-validate-type="text" data-limitation="letters-and-digit" data-required>
                     <span>Ваше сообщение</span>
                     <textarea cols="30" rows="10" name="message"></textarea>
                   </label>
                 </div>
                 <div class="feedback__form-field feedback__form-field--custom-select">
                   <span>Выберите город</span>
-                  <div class="custom-select" data-select data-validate-type="toggle-group" data-message-base="Необходимо выбрать город">
+                  <div class="custom-select" data-select data-validate-type="toggle-group">
                     <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
                       <span class="custom-select__text"></span>
                       <span class="custom-select__icon"></span>
@@ -878,7 +878,7 @@
                   </div>
                 </div>
                 <div class="feedback__form-field feedback__form-field--checkbox">
-                  <label data-validate-type="checkbox" data-message-base="Для отправки сообщения примите согласие на обработку персональных данных">
+                  <label data-validate-type="checkbox">
                     <input class="visually-hidden" type="checkbox">
                     <span>
                       <svg width="8" height="8">
@@ -968,20 +968,20 @@
           <div class="modal__form-wrapper" data-form-validate>
             <form action="https://echo.htmlacademy.ru/courses" method="get">
               <div class="modal__form-field modal__form-field--text">
-                <label data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-required>
+                <label data-validate-type="text" data-limitation="name" data-required>
                   <span>Имя</span>
                   <input data-focus type="text" name="name">
                 </label>
               </div>
               <div class="modal__form-field modal__form-field--text">
-                <label data-validate-type="phone" data-on-input-validate="" data-message-base="Поле обязательно к заполнению" data-required data-phone-length="18">
+                <label data-validate-type="phone" data-on-input-validate="" data-required data-phone-length="18">
                   <span>Телефон</span>
                   <input type="tel" name="phone-number">
                 </label>
               </div>
               <div class="modal__form-field modal__form-field--custom-select">
                 <span>Выберите город</span>
-                <div class="custom-select custom-select--light open-up" data-select data-validate-type="toggle-group" data-message-base="Необходимо выбрать город">
+                <div class="custom-select custom-select--light open-up" data-select data-validate-type="toggle-group">
                   <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
                     <span class="custom-select__text"></span>
                     <span class="custom-select__icon"></span>
@@ -1015,7 +1015,7 @@
                 </div>
               </div>
               <div class="modal__form-field modal__form-field--checkbox">
-                <label data-validate-type="checkbox" data-message-base="Для отправки сообщения примите согласие на обработку персональных данных">
+                <label data-validate-type="checkbox" >
                   <input class="visually-hidden" type="checkbox">
                   <span>
                     <svg width="8" height="8">
